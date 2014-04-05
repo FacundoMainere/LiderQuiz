@@ -169,9 +169,13 @@ function showAns(){
 
 $(document).ready(function(){
     getData();
+    $("body").fadeIn(2000);
     // Display Questions and start timer
    $("button#qstart").click(function(){
-        $(".screen-start").slideUp(1000);
+        $(".mujer, .logo1, h1").animate({opacity:0},1000);
+	$("video").fadeIn(1000).get(0).play();
+	$("video").fadeIn(1000).get(0).play();
+        $(".screen-start").delay(13000).slideUp(1000);
         timerF = setInterval(timer,1000);
         // Load question on start
         showQuiz(currQ);
