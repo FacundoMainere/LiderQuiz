@@ -136,11 +136,38 @@ function retrieveAns(qNum){
  * Check answer and calculate score
  */
 function checkAns(){
-    var marks = 0;
+    var dict = {
+		"Dirigir" : 0,
+		"Persuadir" : 0,
+		"Delegar" : 0,
+		"Participar" : 0
+	};
     $.each(d.quiz, function(i,op){
-       if(selAns[i] && selAns[i] == op.ans){marks++;}
+	   var ans = d.quiz[i].ans[selAns[i]]; 
+	   dict[ans]++;
     });
-    $("div.screen-finish > h2").append(marks *100/totalQ+"%");
+    var arr = [];
+
+	for (var key in dict) {
+		if (dict.hasOwnProperty(key)) {
+			var key2 ={};
+			key2[key] = dict[key];
+			arr.push(key2);
+		}
+	}
+
+	arr.sort();
+    /**var max = {
+				"key":"",
+				"value":0
+				};
+    $.each( dict, function( key, value ) {
+	  if (value > max["value"]){
+		  max["key"] = key;
+		  max["value"] = value;
+	  }
+	});**/
+    $("div.screen-finish > h2").append(Object.keys(arr[0])[0]);
 }
 
 /**
@@ -153,13 +180,9 @@ function showAns(){
         prep +="<li>"+q.question+"<ol>";
         $.each(q.option,function(i,o){
             prep += "<li>"+o;
-            if(selAns[qKey] == i){
-                if(selAns[qKey] == q.ans){
-                    prep +=" <span class='check'>&#x2713;</span>";
-                } else {
-                    prep += " <span class='cross'>&Chi;</span>";
-                }
-            prep += "</li>";
+            if(selAns[qKey] == i){    
+				prep +=" <span class='check'>&#x2713;</span>";
+				prep += "</li>";
             }
         });
         prep += "</ol></li>"
