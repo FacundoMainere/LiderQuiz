@@ -157,17 +157,10 @@ function checkAns(){
 	}
 
 	arr.sort();
-    /**var max = {
-				"key":"",
-				"value":0
-				};
-    $.each( dict, function( key, value ) {
-	  if (value > max["value"]){
-		  max["key"] = key;
-		  max["value"] = value;
-	  }
-	});**/
-    $("div.screen-finish > h2").append(Object.keys(arr[0])[0]);
+    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[0])[0]+"></div>");
+    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[1])[0]+"></div>");
+    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[2])[0]+"></div>");
+    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[3])[0]+"></div>");
 }
 
 /**
