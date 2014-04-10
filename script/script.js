@@ -183,7 +183,7 @@ $(document).ready(function(){
     $("body").fadeIn(2000);
     // Display Questions and start timer
    $("button#qstart").click(function(){
-        $(".mujer, .logo1, h1").animate({opacity:0},1000);
+        $(".mujer, .hombre, .logo1, h1").animate({opacity:0},1000);
 	$("video").fadeIn(1000).get(0).play();
 	$("video").fadeIn(1000).get(0).play();
         $(".screen-start").delay(13000).slideUp(1000);
