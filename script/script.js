@@ -136,31 +136,26 @@ function retrieveAns(qNum){
  * Check answer and calculate score
  */
 function checkAns(){
-    var dict = {
-		"Dirigir" : 0,
-		"Persuadir" : 0,
-		"Delegar" : 0,
-		"Participar" : 0
-	};
-    $.each(d.quiz, function(i,op){
+  var arr = []
+  arr.push({leaderName:"Dirigir",amount:0});
+  arr.push({leaderName:"Persuadir",amount:0});
+  arr.push({leaderName:"Delegar",amount:0});
+  arr.push({leaderName:"Participar",amount:0});
+
+  $.each(d.quiz, function(i,op){
 	   var ans = d.quiz[i].ans[selAns[i]]; 
-	   dict[ans]++;
+     $.each(arr,function(i,leader){
+       if(leader["leaderName"]==ans) {
+          leader["amount"]++;        
+        }
+      });          
     });
-    var arr = [];
 
-	for (var key in dict) {
-		if (dict.hasOwnProperty(key)) {
-			var key2 ={};
-			key2[key] = dict[key];
-			arr.push(key2);
-		}
-	}
-
-	arr.sort();
-    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[0])[0]+"></div>");
-    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[1])[0]+"></div>");
-    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[2])[0]+"></div>");
-    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[3])[0]+"></div>");
+	arr = arr.sort(function(a,b){return b["amount"]-a["amount"]});
+  $("div.screen-finish > h2").append("<div id="+arr[0]["leaderName"]+"></div>");
+  $("div.screen-finish > h2").append("<div id="+arr[1]["leaderName"]+"></div>");
+  $("div.screen-finish > h2").append("<div id="+arr[2]["leaderName"]+"></div>");
+  $("div.screen-finish > h2").append("<div id="+arr[3]["leaderName"]+"></div>");
 }
 
 /**

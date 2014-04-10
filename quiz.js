@@ -14,6 +14,21 @@
         "c":"Persuadir",
         "d":"Delegar"
         }
+		},
+  {
+			"question":"Usted tiene un colaborador que está mejorando en su desempeño. Él es consciente de esto y ha comenzado a efectuar sugerencias que parecen atinadas y valiosas. ¿Qué cree que usted haría en este caso?",
+			"option": {
+					"a":"Se asegura que el colaborador reciba toda la información necesaria para consolidar sus logros y escucha sus ideas.",
+					"b":"Aumenta el cuidado sobre las tareas de su colaborador e incrementa sus indicaciones.",
+					"c":"No hace nada y lo deja actuar.",
+          "d":"Se reúne con él para analizar su desempeño y le da sus opiniones al respecto fundamentando los aspectos positivos e importantes de la tarea."
+			},
+			"ans":{
+        "a":"Dirigir",
+        "b":"Participar",
+        "c":"Persuadir",
+        "d":"Delegar"
+        }
 		}
 	]
 }
