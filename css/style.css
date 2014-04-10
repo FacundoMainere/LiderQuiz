@@ -23,10 +23,16 @@ body{
 
 }
 img.mujer {
-        width:30%;
+        width:27%;
 	bottom:0;
 	position:absolute;
 	left:0;
+}
+img.hombre {
+        width:25%;
+	bottom:0;
+	position:absolute;
+	right:0;
 }
 .screen-start h1 {
 	text-align:center;
@@ -39,6 +45,21 @@ img.logo1 {
         top:7%;
         right:7%;
 	position:absolute
+}
+img.logo2 {
+        top:7%;
+        right:7%;
+	float:right;
+	width:25%;
+}
+img.barrita {
+	margin-left:2%;
+	margin-top:1%;
+	float:left;
+}
+img.logos {
+	float:right;
+	width:40%;
 }
 video {
         width:70%;
@@ -73,27 +94,30 @@ video {
 #info{
     padding:10px;
     font-size: 14px;
-    font-size:2rem;
+    font-size:1rem;
     background:#3c86b7;
     color:white;	
     border-radius:6px;	
+    width:10%;
 }
 #time{
     float: right;
 }
-#quiz {width:80%;margin: 3% auto;;overflow:auto;}
-#qus{
-    padding: 20px;
-    color: #fff;
-    border-bottom: 1px solid #bbbbc1;
-    text-shadow:1px 1px 2px #000;
-    font-size:2rem;
+#quiz {width:95%;margin: 3% auto;;overflow:auto;}
+#qus {
+    padding: 20px 55px;
+    color: #4b6960;
+    border-radius:45px;
+    font-size:1.3rem;
+    background:rgba(255,255,255,.5);	
+    margin:3% 5% 0;	
+
 }
 #ans{
     margin: 0 20px;
     padding:10px 0;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #bbbbc1;
+   /* border-bottom: 1px solid #bbbbc1;*/
+
 }
 /*------------ Answer formatting --------*/
 #ans .radioList{
@@ -103,27 +127,32 @@ video {
 #ans .radioList li{
     display: block;
     margin: 10px 0;
-    padding: 10px;
+    padding:5px 35px;
     font-size: 1.3rem
     text-align: left;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-	background:#7da698;
-	color:white;
+    color:#4B6960;
     cursor:pointer;	
+    background:url("../imagenes/barrita2.png") no-repeat;	
+    min-height:46px;
 }
 #ans .radioList li.btn-success {
 	background:#e67b0c;
+	color:white;
+	border-radius:10px;
 }
 #nav{
-    margin: 0 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ffffff;
+ /*   padding-top: 20px;
+    border-top: 1px solid #ffffff;*/
 }
-
+#botones {
+	width:40%;
+	float:left;
+	margin-top:1%;
+	margin-left:10%;
+}
 button#prev-btn{
     float: right;
+    margin-top:10px;	
 }
 button#next-btn{
     float: right;

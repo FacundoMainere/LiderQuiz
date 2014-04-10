@@ -157,10 +157,17 @@ function checkAns(){
 	}
 
 	arr.sort();
-    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[0])[0]+"></div>");
-    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[1])[0]+"></div>");
-    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[2])[0]+"></div>");
-    $("div.screen-finish > h2").append("<div id="+Object.keys(arr[3])[0]+"></div>");
+    /**var max = {
+				"key":"",
+				"value":0
+				};
+    $.each( dict, function( key, value ) {
+	  if (value > max["value"]){
+		  max["key"] = key;
+		  max["value"] = value;
+	  }
+	});**/
+    $("div.screen-finish > h2").append(Object.keys(arr[0])[0]);
 }
 
 /**
@@ -188,7 +195,7 @@ $(document).ready(function(){
     $("body").fadeIn(2000);
     // Display Questions and start timer
    $("button#qstart").click(function(){
-        $(".mujer, .logo1, h1").animate({opacity:0},1000);
+        $(".mujer, .hombre, .logo1, h1").animate({opacity:0},1000);
 	$("video").fadeIn(1000).get(0).play();
 	$("video").fadeIn(1000).get(0).play();
         $(".screen-start").delay(13000).slideUp(1000);
