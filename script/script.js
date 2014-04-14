@@ -152,14 +152,10 @@ function checkAns(){
     });
 
   arr = arr.sort(function(a,b){return b["amount"]-a["amount"]});
-  $("#"+arr[0]["leaderName"]).addClass("1");
-  $("#"+arr[0]["leaderName"]+">.porcentaje").append((arr[0]["amount"] / totalQ*100).toFixed(2));
-  $("#"+arr[1]["leaderName"]).addClass("2");
-  $("#"+arr[1]["leaderName"]+">.porcentaje").append((arr[1]["amount"] / totalQ*100).toFixed(2));
-  $("#"+arr[2]["leaderName"]).addClass("3");
-  $("#"+arr[2]["leaderName"]+">.porcentaje").append((arr[2]["amount"] / totalQ*100).toFixed(2));
-  $("#"+arr[3]["leaderName"]).addClass("4");
-  $("#"+arr[3]["leaderName"]+">.porcentaje").append((arr[3]["amount"] / totalQ*100).toFixed(2));
+  for ( var i = 0; i < 4; i++ ) {
+	$("#"+arr[i]["leaderName"]).addClass(i.toString());
+	$("#"+arr[i]["leaderName"]+">.porcentaje").append((arr[i]["amount"] / totalQ*100).toFixed(2));
+  }
   $(".tipoLider").tsort({attr:'class'}); 
 }
 
