@@ -219,5 +219,6 @@ $(document).ready(function(){
     $("button#show-ans").click(function(){
         showAns();
         $(".screen-finish").slideUp(1000);
+	$(".screen-finish .logo1").animate({opacity:1},1000);
     });
 });
