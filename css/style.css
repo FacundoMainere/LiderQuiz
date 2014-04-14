@@ -86,10 +86,19 @@ video {
 .screen-finish{
     display: none;
     padding-top: 150px;
-    background:#46a546;
     height: 100%;
     color: #fff;
     text-align: center;
+    width:80%;	
+    margin:auto;
+}
+.screen-finish h2 {   
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+    border-radius: 45px 45px 45px 45px;
+    color: #4B6960;
+    font-size: 1.3rem;
+    margin: 6% 5% 0;
+    padding: 20px 55px
 }
 #info{
     padding:10px;
@@ -221,11 +230,11 @@ footer{
 #nav .btn:hover {
 	background:#e67B0c;
 }
-button#qstart {
+button#qstart, button.btn {
 	background:#e67B0c;
 	padding:10px;
 	color:white;
-	border-radius:4px
+	border-radius:10px;
  	border:none;	
 	cursor:pointer;
 }
