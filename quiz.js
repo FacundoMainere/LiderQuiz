@@ -24,10 +24,25 @@
           "d":"Se reúne con él para analizar su desempeño y le da sus opiniones al respecto fundamentando los aspectos positivos e importantes de la tarea."
 			},
 			"ans":{
-        "a":"Dirigir",
+        "a":"Delegar",
+        "b":"Dirigir",
+        "c":"Participar",
+        "d":"Persuarir"
+        }
+		},
+  {
+			"question":"Usted acaba de ser nombrado supervisor de un importante sector, reemplazando a un supervisor muy reconocido (el más antiguo) que se jubila. Usted fue bien recibido por el grupo y las relaciones son buenas. Usted se ha visto obligado a cambiar de puesto a casi todos sus colaboradores. Uno de ellos es el más afectado por el cambio y debe desempeñarse en tareas bastante diferentes a las anteriores. Ahora deberá aplicar una metodología de trabajo totalmente nueva para él. Él fue muy efectivo en su trabajo anterior. ¿Cuál de las siguientes sería su probable reacción?",
+			"option": {
+					"a":"Estimula al colaborador dándole las razones por las cuales deberá aplicar la nueva metodología y le permite que la estudie y resuelva cómo aplicarla.",
+					"b":"Discute con el colaborador la conveniencia de aplicar la nueva metodología y le pide sus opiniones.",
+					"c":"Fija los objetivos y pone al alcance del colaborador los elementos para que aprenda la nueva metodología y la aplique según su propio criterio.",
+          "d":"Se reúne con el colaborador y organiza el aprendizaje de la nueva metodología, le informa con claridad de lo que se espera de su aplicación y los objetivos a alcanzar. Acompaña al colaborador en las primeras aplicaciones de la metodología."
+			},
+			"ans":{
+        "a":"Persuadir",
         "b":"Participar",
-        "c":"Persuadir",
-        "d":"Delegar"
+        "c":"Delegar",
+        "d":"Dirigir"
         }
 		}
 	]
