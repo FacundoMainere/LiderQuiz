@@ -1,5 +1,5 @@
 // Setup Timeing
-var h = 0,m = 5, s = 0;
+var h = 0,m = 15, s = 0;
 
 var d, totalQ, currQ = 0;
 
@@ -152,10 +152,10 @@ function checkAns(){
     });
 
 	arr = arr.sort(function(a,b){return b["amount"]-a["amount"]});
-  $("div.screen-finish > h2").append("<div id="+arr[0]["leaderName"]+"></div>");
-  $("div.screen-finish > h2").append("<div id="+arr[1]["leaderName"]+"></div>");
-  $("div.screen-finish > h2").append("<div id="+arr[2]["leaderName"]+"></div>");
-  $("div.screen-finish > h2").append("<div id="+arr[3]["leaderName"]+"></div>");
+  $("#"+arr[0]["leaderName"]).addClass("first");
+  $("#"+arr[1]["leaderName"]).addClass("second");
+  $("#"+arr[2]["leaderName"]).addClass("third");
+  $("#"+arr[3]["leaderName"]).addClass("fourth");
 }
 
 /**
