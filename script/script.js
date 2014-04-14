@@ -189,11 +189,11 @@ $(document).ready(function(){
     // Display Questions and start timer
    $("button#qstart").click(function(){
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
-//	$("video").fadeIn(1000).get(0).play();
-//	$("video").delay(14000).fadeOut(1000).get(0).play();
-        $(".screen-start").delay(15).slideUp(1000);
-	$("#ans").delay(18).slideDown(6000);
-	$("#nav").delay(22).slideDown(1000);
+	$("video").fadeIn(1000).get(0).play();
+	$("video").delay(14000).fadeOut(1000).get(0).play();
+        $(".screen-start").delay(15000).slideUp(1000);
+	$("#ans").delay(18000).slideDown(6000);
+	$("#nav").delay(22000).slideDown(1000);
         timerF = setInterval(timer,1000);
         // Load question on start
         showQuiz(currQ);
