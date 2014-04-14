@@ -151,7 +151,7 @@ function checkAns(){
       });          
     });
 
-	arr = arr.sort(function(a,b){return b["amount"]-a["amount"]});
+  arr = arr.sort(function(a,b){return b["amount"]-a["amount"]});
   $("#"+arr[0]["leaderName"]).addClass("first");
   $("#"+arr[1]["leaderName"]).addClass("second");
   $("#"+arr[2]["leaderName"]).addClass("third");
