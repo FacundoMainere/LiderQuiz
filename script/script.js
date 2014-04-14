@@ -183,10 +183,12 @@ $(document).ready(function(){
     $("body").fadeIn(2000);
     // Display Questions and start timer
    $("button#qstart").click(function(){
-        $(".mujer, .hombre, .logo1, h1").animate({opacity:0},1000);
+        $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
 	$("video").fadeIn(1000).get(0).play();
-	$("video").fadeIn(1000).get(0).play();
-        $(".screen-start").delay(13000).slideUp(1000);
+	$("video").delay(14000).fadeOut(1000).get(0).play();
+        $(".screen-start").delay(15000).slideUp(1000);
+	$("#ans").delay(18000).slideDown(6000);
+	$("#nav").delay(22000).slideDown(1000);
         timerF = setInterval(timer,1000);
         // Load question on start
         showQuiz(currQ);
@@ -200,6 +202,10 @@ $(document).ready(function(){
     $("button#next-btn").click(function(){
         clearOptions();
         showQuiz(++currQ);
+        $("#ans").css("display", "none");
+	$("#ans").delay(2000).slideDown(6000);
+	$("#nav").delay(8000).slideDown(1000);
+
     });
     // Go to previous question
     $("button#prev-btn").click(function(){
