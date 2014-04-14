@@ -85,7 +85,6 @@ video {
 }
 .screen-finish{
     display: none;
-    padding-top: 150px;
     height: 100%;
     color: #fff;
     text-align: center;
@@ -97,8 +96,24 @@ video {
     border-radius: 45px 45px 45px 45px;
     color: #4B6960;
     font-size: 1.3rem;
-    margin: 6% 5% 0;
+    margin: 2% 5% 0;
     padding: 20px 55px
+}
+.tipoLider {
+    color:#4B6960;
+    text-align:left;
+    width:70%;
+    padding:20px;
+    background:rgba(255,255,255,.5);
+    border-radius:20px;
+    margin:20px auto;	
+}
+.tipoLider h3 {
+	margin:0;
+	color:#e67b0c;
+}
+.tipoLider p {
+	margin:0;
 }
 #info{
     padding:10px;
