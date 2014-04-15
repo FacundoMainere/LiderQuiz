@@ -6,6 +6,8 @@
         <script src="script/jquery-1.7.1.min.js" type="text/javascript"></script>
         <script src="script/jquery.tinysort.min.js" type="text/javascript"></script>
         <link href="css/style.css" type="text/css" rel="stylesheet" />
+        <link href="css/jquery.mCustomScrollbar.css" type="text/css" rel="stylesheet" />
+        <script src="script/jquery.mCustomScrollbar.js" type="text/javascript"></script>
         <script src="script/script.js" type="text/javascript"></script>
 
     </head>
@@ -33,27 +35,14 @@
             <div class="screen-finish">
 	        <img class="logo1" src="imagenes/logo1.png" />
                 <h2>Usted tiende a liderar con los siguientes estilos en orden de preferencia, según el puntaje obtenido en cada uno de ellos.</h2>
-                
                 <div id="Dirigir" class="tipoLider"><h3>Estilo DIRIGIR</h3>
-				<p>Usted podría tender a liderar dando instrucciones y supervisando. Sus comportamientos podrían estar asociados primordialmente con estructurar, controlar, supervisar.</p>
-				<div class="porcentaje"></div>
-				</div>
-                
+				<p>Usted podría tender a liderar dando instrucciones y supervisando. Sus comportamientos podrían estar asociados primordialmente con estructurar, controlar, supervisar.</p></div>
                 <div id="Persuadir" class="tipoLider"><h3>Estilo PERSUADIR</h3>
-				<p>Usted podría tender a liderar explicando las decisiones y aclarando dudas. Sus comportamientos podrían estar asociados primordialmente con instruir, orientar, ayudar.</p>
-				<div class="porcentaje"></div>
-				</div>
-                
+				<p>Usted podría tender a liderar explicando las decisiones y aclarando dudas. Sus comportamientos podrían estar asociados primordialmente con instruir, orientar, ayudar.</p></div>
                 <div id="Delegar" class="tipoLider"><h3>Estilo DELEGAR</h3>
-				<p>Usted podría tender a liderar trasladando la responsabilidad de la toma de decisiones y su ejecución. Sus comportamientos podrían estar asociados primordialmente con dar a otros la posibilidad de la toma de decisión.</p>
-				<div class="porcentaje"></div>
-				</div>
-                
+				<p>Usted podría tender a liderar trasladando la responsabilidad de la toma de decisiones y su ejecución. Sus comportamientos podrían estar asociados primordialmente con dar a otros la posibilidad de la toma de decisión.</p></div>
                 <div id="Participar" class="tipoLider"><h3>Estilo PARTICIPAR</h3>
-				<p>Usted podría tender a liderar compartiendo ideas y ayudando en la toma de decisiones. Sus comportamientos podrían estar asociados primordialmente con apoyar, escuchar, facilitar.</p>
-				<div class="porcentaje"></div>
-				</div>
-                
+				<p>Usted podría tender a liderar compartiendo ideas y ayudando en la toma de decisiones. Sus comportamientos podrían estar asociados primordialmente con apoyar, escuchar, facilitar.</p></div>
                 <br />
                 <button class="btn btn-warning" onclick="window.location.reload()">Reintentar</button>
             </div>
@@ -64,13 +53,15 @@
                     <span id="time"></span>
 		    <div class="clear"></div>	
                 </div>
-               	<img class="barrita" src="imagenes/barrita.png" />
-                	<div id="qus">
+			<div class="scroleable">
+	               		<img class="barrita" src="imagenes/barrita.png" />
+                		<div id="qus">
+				</div>
+              		 	<div id="ans">
+                   			<ul class="radioList">
+                    			</ul>
+        		        </div>
 			</div>
-                <div id="ans">
-                    <ul class="radioList">
-                    </ul>
-                </div>
                 <div id="nav">
                    <div id="botones">
 		    <button id="fin-btn" class="btn btn-danger">Terminar</button>
@@ -84,5 +75,10 @@
             </div>
             <div id="result"><ol></ol></div>
         </div>
+<script type="text/javascript">
+    $(window).load(function () {
+        $(".scroleable").mCustomScrollbar();
+    });
+</script>
     </body>
 </html>

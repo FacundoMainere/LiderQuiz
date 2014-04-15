@@ -152,10 +152,10 @@ function checkAns(){
     });
 
   arr = arr.sort(function(a,b){return b["amount"]-a["amount"]});
-  for ( var i = 0; i < 4; i++ ) {
-	$("#"+arr[i]["leaderName"]).addClass(i.toString());
-	$("#"+arr[i]["leaderName"]+">.porcentaje").append((arr[i]["amount"] / totalQ*100).toFixed(2));
-  }
+  $("#"+arr[0]["leaderName"]).addClass("1");
+  $("#"+arr[1]["leaderName"]).addClass("2");
+  $("#"+arr[2]["leaderName"]).addClass("3");
+  $("#"+arr[3]["leaderName"]).addClass("4");
   $(".tipoLider").tsort({attr:'class'}); 
 }
 
@@ -194,8 +194,8 @@ $(document).ready(function(){
 	$("video").fadeIn(1000).get(0).play();
 	$("video").delay(14000).fadeOut(1000).get(0).play();
         $(".screen-start").delay(15000).slideUp(1000);
-	$("#ans").delay(18000).slideDown(6000);
-	$("#nav").delay(22000).slideDown(1000);
+	$("#ans").slideDown(2000);
+	$("#nav").delay(13000).slideDown(1000);
         timerF = setInterval(timer,1000);
         // Load question on start
         showQuiz(currQ);
@@ -228,4 +228,6 @@ $(document).ready(function(){
         $(".screen-finish").slideUp(1000);
 	$(".screen-finish .logo1").animate({opacity:1},1000);
     });
+    $(".scroleable").customScrollbar();
+
 });
