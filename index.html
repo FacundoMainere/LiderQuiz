@@ -8,9 +8,9 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" />
         <link href="css/jquery.mCustomScrollbar.css" type="text/css" rel="stylesheet" />
         <script src="script/jquery.mCustomScrollbar.js" type="text/javascript"></script>
+        <script src="script/jquery.animations.min.js" type="text/javascript"></script>
         <script src="script/script.js" type="text/javascript"></script>
-
-    </head>
+   </head>
     <body>
         <noscript>
         <div class="alert alert-error" style="text-align: center;">
@@ -31,7 +31,7 @@
 		</div>
             </div>
             <div class="screen-finish">
-	        <img class="logo1" src="imagenes/logo1.png" />
+       <img class="logo1" src="imagenes/logo1.png" />
                 <h2>Usted tiende a liderar con los siguientes estilos en orden de preferencia, según el puntaje obtenido en cada uno de ellos.</h2>
                 <div id="Dirigir" class="tipoLider"><h3>Estilo DIRIGIR</h3>
 				<p>Usted podría tender a liderar dando instrucciones y supervisando. Sus comportamientos podrían estar asociados primordialmente con estructurar, controlar, supervisar.</p></div>
@@ -64,8 +64,8 @@
                    <div id="botones">
 		    <button id="fin-btn" class="btn btn-danger">Terminar</button>
                     <button id="ans-clear" class="btn">Desmarcar</button>
-                    <button id="next-btn" class="btn btn-primary">Siguiente</button>
                     <button id="prev-btn" class="btn btn-primary">Anterior</button>
+                    <button id="next-btn" class="btn btn-primary">Siguiente</button>
 		    </div>
 		    <img src="imagenes/logos.png" class="logos"/>	
 		    <div class="clear"></div>	
@@ -76,6 +76,15 @@
 <script type="text/javascript">
     $(window).load(function () {
         $(".scroleable").mCustomScrollbar();
+ $("button#qstart, button#next-btn").click(function(){
+	$('.scroleable').animate('flyFromLeft');
+	$('li:nth-child(1)').animate('flipX',{delay:1500});
+	$('li:nth-child(2)').animate('flipX', {delay: 2000});
+	$('li:nth-child(3)').animate('flipX', {delay: 2500});
+	$('li:nth-child(4)').animate('flipX', {delay: 3000});
+
+    });
+
     });
 </script>
     </body>
