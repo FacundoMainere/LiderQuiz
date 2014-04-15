@@ -159,6 +159,10 @@ function checkAns(){
   $(".tipoLider").tsort({attr:'class'}); 
 }
 
+function playVideo(video){
+    window.JSInterface.startVideo(video);
+  }
+
 /**
  * show selected answers right or wrong
  */
@@ -180,6 +184,8 @@ function showAns(){
 }
 
 $(document).ready(function(){
+	
+	
     getData();
     $("body").fadeIn(2000);
     // Display Questions and start timer
