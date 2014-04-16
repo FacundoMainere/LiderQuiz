@@ -147,7 +147,7 @@ video {
    /* border-bottom: 1px solid #bbbbc1;*/
 }
 .scroleable {
-	height:600px;
+	height:500px;
 	margin:4%  auto auto;
 	width:80%;
 	overflow:auto;
