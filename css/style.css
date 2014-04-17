@@ -36,10 +36,11 @@ img.hombre {
 }
 .screen-start h1 {
 	text-align:center;
-	margin-top:25%;
+	margin:19% auto 2%;
         font-size:2.5rem;
         color:#e67b0c;
         font-weight:normal;
+	width:60%;
 }
 img.logo1 {
         top:7%;
@@ -150,7 +151,6 @@ video {
 	height:500px;
 	margin:4%  auto auto;
 	width:80%;
-	overflow:auto;
 }
 @media (max-height:600px){
 	.scroleable {
