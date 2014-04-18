@@ -184,6 +184,7 @@ $(document).ready(function(){
     $("body").fadeIn(2000);
     // Display Questions and start timer
    $("button#qstart").click(function(){
+	$('.scroleable').css("display","block");
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
 	$("video").fadeIn(1000).get(0).play();
 	$("video").delay(14000).fadeOut(1000).get(0).play();

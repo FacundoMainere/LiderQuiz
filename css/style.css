@@ -1,5 +1,6 @@
 html, body {height:100%;min-height:100%;}
 body{
+    overflow:hidden;
     margin: 0;
     padding: 0;
     background:url("../imagenes/fondo_body1024.png") no-repeat, -webkit-linear-gradient(top, #a4c4ba 1%,#ffffff 100%);
@@ -36,16 +37,23 @@ img.hombre {
 }
 .screen-start h1 {
 	text-align:center;
+<<<<<<< HEAD
+	margin:10% auto 2%;
+        font-size:2.5rem;
+        color:#e67b0c;
+        font-weight:normal;
+	width:54%;
+=======
 	margin:19% auto 2%;
         font-size:2.5rem;
         color:#e67b0c;
         font-weight:normal;
 	width:60%;
+>>>>>>> 60edce384f9192d365ac141883e67971a2e0c740
 }
 img.logo1 {
         top:7%;
-        right:7%;
-	position:absolute
+	position:relative;
 }
 img.logo2 {
         top:7%;
@@ -65,7 +73,7 @@ img.logos {
 video {
         width:70%;
         display:none;
-        top:18%;
+        top:13%;
         left:16%;
 	position:absolute;
 }
@@ -89,8 +97,9 @@ video {
     height: 100%;
     color: #fff;
     text-align: center;
-    width:80%;	
+    width:90%;	
     margin:auto;
+    overflow:auto;	
 }
 .screen-finish h2 {   
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
@@ -148,14 +157,24 @@ video {
    /* border-bottom: 1px solid #bbbbc1;*/
 }
 .scroleable {
+<<<<<<< HEAD
+	height:65%;
+	margin:3% 5%;
+	overflow:auto;
+	display:none;
+	position:absolute;
+=======
 	height:500px;
 	margin:4%  auto auto;
+>>>>>>> 60edce384f9192d365ac141883e67971a2e0c740
 	width:80%;
 }
 @media (max-height:600px){
 	.scroleable {
-		height:400px;
+		height:55%;
+		position:absolute;
 		width:90%;
+		margin:2% auto;
 		}
 }
 /*------------ Answer formatting --------*/
@@ -193,8 +212,8 @@ ul.radioList {
     display:none;	
     position:absolute;
     bottom:0;	
-    width:75%;
-    margin:1% auto;
+    width:90%;
+    margin:auto;
     padding:25px 0;
 }
 #botones {
