@@ -187,10 +187,11 @@ $(document).ready(function(){
 	$('.scroleable').css("display","block");
 	$(".scroleable-finish").perfectScrollbar();
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
-//	$("video").fadeIn(1000).get(0).play();
-//	$("video").delay(14000).fadeOut(1000).get(0).play();
-        $(".screen-start").delay(15).slideUp(1000);
-	$("#nav").delay(15).slideDown(1000);
+	$("video").fadeIn(1000).get(0).play();
+	$("video").delay(14000).fadeOut(1000).get(0).play();
+        $(".screen-start").delay(15000).slideUp(1000);
+	$("#quiz").delay(16000).animate({opacity:"1"}, 500);
+	$("#nav").delay(15000).slideDown(1000);
         timerF = setInterval(timer,1000);
         // Load question on start
         showQuiz(currQ);

@@ -85,6 +85,8 @@ video {
     display:inline-block;
     width:100%;
     bottom:0;	
+    position:absolute;	
+    z-index:1;
 }
 .screen-finish{
     display: none;
@@ -137,7 +139,7 @@ video {
 #qnum {
 	float:left;
 }
-#quiz {width:90%;margin: 2% auto;overflow:auto;}
+#quiz {width:90%;margin: 2% auto;overflow:auto;opacity:0;}
 #qus {
     padding: 20px 55px;
     color: #e67B06;
@@ -172,6 +174,9 @@ video {
 		margin:2% auto;
 		}
 	#nav { height:15% !important;}
+	video {
+		top:9%;
+	}
 }
 * outline {
 	outline:0;
