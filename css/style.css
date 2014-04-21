@@ -115,6 +115,14 @@ video {
     border-radius:20px;
     margin:20px auto;	
 }
+@media (max-height:600px) {
+	.tipoLider {
+	width:90%;
+	margin:4px auto;
+	font-size:1rem;
+	padding:10px;
+	}
+}
 .tipoLider h3 {
 	margin:0;
 	color:#e67b0c;
@@ -163,7 +171,7 @@ video {
 }
 @media (min-height:859px){
 	.scroleable{
-	 	margin:10% 5%;
+	 	margin:7% 5%;
 }
 }
 @media (max-height:600px){
