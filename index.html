@@ -6,23 +6,43 @@
         <script src="script/jquery-1.7.1.min.js" type="text/javascript"></script>
         <script src="script/jquery.tinysort.min.js" type="text/javascript"></script>
         <link href="css/style.css" type="text/css" rel="stylesheet" />
-<!--        <script src="script/tinyscrolling.js" type="text/javascript"></script> -->
+        <link href="css/perfect-scrollbar.css" type="text/css" rel="stylesheet" />
+        <script src="script/perfect-scrollbar.js" type="text/javascript"></script>
         <script src="script/jquery.animations.min.js" type="text/javascript"></script>
         <script src="script/script.js" type="text/javascript"></script>
 <script src="http://192.168.1.45:8080/target/target-script-min.js#anonymous"></script>
 <script type="text/javascript">
 
     $(window).load(function () {
-	$("button#qstart, button#next-btn").click(function(){
-	$('.scroleable').animate('slideFromRight');
-	$('li:nth-child(1)').animate('flipX',{delay:1500});
-	$('li:nth-child(2)').animate('flipX', {delay: 2000});
-	$('li:nth-child(3)').animate('flipX', {delay: 2500});
-	$('li:nth-child(4)').animate('flipX', {delay: 3000});
+	$("button#qstart, button#next-btn, button#prev-btn").click(function(){
+		$('.scroleable').animate('slideFromRight');
+	//	$('li:nth-child(1)').animate('flipX',{delay:1000});
+	//	$('li:nth-child(2)').animate('flipX', {delay: 1500});
+	//	$('li:nth-child(3)').animate('flipX', {delay: 2000});
+	//	$('li:nth-child(4)').animate('flipX', {delay: 2500});
+		$('.scroleable').perfectScrollbar('update');
+	
+		$('.scroleable').delay(600).animate({scrollTop: $('.scroleable').height()}, 800);
+  		$('.scroleable').animate({scrollTop: 0}, 800);	
+	});
+	$("button#next-btn, button#prev-btn").click(function(){
+		document.getElementById('carga-pregunta').play();	 
+	});
+	$("li").click(function(){
+		document.getElementById('elige-pregunta').play();	 
+	});
+	$("#fin-btn").click(function(){
+		document.getElementById('terminar').play();	 
+	});
 
-    });
-//	$('.scroleable').tinyscrollbar();
-    });
+	$('.scroleable').perfectScrollbar();
+	var altura = $('.scroleable').height();
+	if (altura > 597) {
+		$('.scroleable .ps-scrollbar-y-rail').css("opacity","0");
+	}else {
+		$('.scroleable .ps-scrollbar-y-rail').css("opacity","1");
+	}
+});
 </script>
 
    </head>
@@ -36,17 +56,18 @@
             <div class="screen-start">
 		<div id="inicio">
 		<img class="logo1" src="imagenes/logo1.png" />
-                  <h1>¿Sabe qué tipo de líder es?<br>
-¿Conoce su perfil de liderazgo?</h1>
+                  <h1>¿Sabe qué tipo de <strong>líder</strong> es?<br>
+¿Conoce su <strong>perfil de liderazgo?</strong></h1>
                   <img src="imagenes/mujer2.png" class="mujer" />
 	          <img src="imagenes/hombre.png" class="hombre" />
-		  <div class="clear"></div>	
-        	  <img id="prueba" src="http://2.bp.blogspot.com/_GQKhL3A9brI/SfAjgkiZ7II/AAAAAAAAAAM/ZeE3-9aQmrI/s1600-h/asd.gif" onclick="window.JSInterface.startVideo('file:///android_asset/Quizer/video.webm');"></img>
-              <button id="qstart" style="border:none;">Empezar</button>
+
+        	  <video id="prueba" src="video4.ogg" muted></video>
+ 		  <div class="clear"></div>	
+               <button id="qstart">Comenzar</button>
 		</div>
             </div>
-            <div class="screen-finish scrollbar-inner">
-       <img class="logo1" src="imagenes/logo1.png" />
+            <div class="screen-finish">
+		<div class="scroleable-finish">
                 <h2>Usted tiende a liderar con los siguientes estilos en orden de preferencia, según el puntaje obtenido en cada uno de ellos.</h2>
                 <div id="Dirigir" class="tipoLider"><h3>Estilo DIRIGIR</h3>
 				<p>Usted podría tender a liderar dando instrucciones y supervisando. Sus comportamientos podrían estar asociados primordialmente con estructurar, controlar, supervisar.</p></div>
@@ -57,7 +78,8 @@
                 <div id="Participar" class="tipoLider"><h3>Estilo PARTICIPAR</h3>
 				<p>Usted podría tender a liderar compartiendo ideas y ayudando en la toma de decisiones. Sus comportamientos podrían estar asociados primordialmente con apoyar, escuchar, facilitar.</p></div>
                 <br />
-                <button class="btn btn-warning" onclick="window.location.reload()">Volver a Comenzar</button>
+                <button class="btn btn-warning final" onclick="window.location.reload()">Volver a Comenzar</button>
+		</div>
             </div>
             <div id="quiz">
 		<img class="logo2" src="imagenes/logo1.png" />
@@ -72,20 +94,24 @@
 				</div>
               		 	<div id="ans">
                    			<ul class="radioList">
-                    			</ul>
-        		        </div>
-			</div>
+               			</ul>
+     			</div>
+		        </div>
                 <div id="nav">
                    <div id="botones">
-		    <button id="fin-btn" class="btn btn-danger">Terminar</button>
+		    <button id="fin-btn" class="btn btn-danger">&nbsp;</button>
                     <button id="ans-clear" class="btn">Desmarcar</button>
-                    <button id="prev-btn" class="btn btn-primary">Anterior</button>
-                    <button id="next-btn" class="btn btn-primary">Siguiente</button>
-		    </div>
+                    <button id="prev-btn" class="btn btn-primary">&nbsp;</button>
 		    <img src="imagenes/logos.png" class="logos"/>	
+                    <button id="next-btn" class="btn btn-primary">&nbsp;</button>
+		    </div>
                 </div>
-            </div>
+	    </div>	
             <div id="result"><ol></ol></div>
         </div>
+	<audio id="carga-pregunta" src="audio/carga_pregunta.ogg" preload="auto"></audio>
+	<audio id="elige-pregunta" src="audio/elige_pregunta.ogg" preload="auto"></audio>
+	<audio id="terminar" src="audio/terminar.ogg" preload="auto"></audio>
+
     </body>
 </html>

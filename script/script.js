@@ -90,9 +90,9 @@ function btnHandler(now){
         $("button#next-btn").show();
     }
     if(now == 0){
-        $("button#prev-btn").hide();
+        $("button#prev-btn").css("opacity","0");
     } else {
-        $("button#prev-btn").show();
+        $("button#prev-btn").css("opacity","1");
     }
 }
 
@@ -190,10 +190,13 @@ $(document).ready(function(){
     $("body").fadeIn(2000);
     // Display Questions and start timer
    $("button#qstart").click(function(){
+	$('.scroleable').css("display","block");
+	$(".scroleable-finish").perfectScrollbar();
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
 	$("video").fadeIn(1000).get(0).play();
 	$("video").delay(14000).fadeOut(1000).get(0).play();
         $(".screen-start").delay(15000).slideUp(1000);
+	$("#quiz").delay(16000).animate({opacity:"1"}, 500);
 	$("#nav").delay(15000).slideDown(1000);
         timerF = setInterval(timer,1000);
         // Load question on start
@@ -219,11 +222,13 @@ $(document).ready(function(){
     // Finish Quiz
     $("button#fin-btn").click(function(){
         finish();
+	$('.scroleable-finish').perfectScrollbar();
+
     });
     $("button#show-ans").click(function(){
         showAns();
         $(".screen-finish").slideUp(1000);
-	$(".screen-finish .logo1").animate({opacity:1},1000);
+//(".screen-finish .logo1").animate({opacity:1},1000);
     });
 
 });
