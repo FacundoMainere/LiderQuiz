@@ -43,11 +43,11 @@ img.hombre {
         font-weight:normal;
 	width:54%;
 }
-@media (max-height:500px){
+@media (max-height:600px){
 	.screen-start h1 {margin:10% auto 2%;}
 }
 img.logo1 {
-        top:7%;
+        margin-top:3%;
 	position:relative;
 }
 img.logo2 {
