@@ -30,7 +30,7 @@ function timer(){
     }
     if(m == 0){
         if(h > 0){
-            m = 59;
+            m = 59;video
             h--;
         }
     }
@@ -63,9 +63,10 @@ function showQuiz(now){
     // Display Question
     $("#qus").text(d.quiz[now].question);
 
+	var optionsLetter=["a","b","c","d"];
     // Display Options
     $.each(d.quiz[now].option, function(i,op){
-        $("ul.radioList").append('<li class="btn" data-val="'+i+'">'+op+'</li>');
+        $("ul.radioList").append('<li class="btn" data-val="'+i+'">'+'<span>'+i+'</span>'+op+'</li>');
     })
     $("ul.radioList li").click(function(){
         var Ans = $(this).data("val");
@@ -152,10 +153,10 @@ function checkAns(){
     });
 
   arr = arr.sort(function(a,b){return b["amount"]-a["amount"]});
-  $("#"+arr[0]["leaderName"]).addClass("1");
-  $("#"+arr[1]["leaderName"]).addClass("2");
-  $("#"+arr[2]["leaderName"]).addClass("3");
-  $("#"+arr[3]["leaderName"]).addClass("4");
+  $("#"+arr[0]["leaderName"]).addClass("1").prepend("<span>1</span>");
+  $("#"+arr[1]["leaderName"]).addClass("2").prepend("<span>2</span>");
+  $("#"+arr[2]["leaderName"]).addClass("3").prepend("<span>3</span>");
+  $("#"+arr[3]["leaderName"]).addClass("4").prepend("<span>4</span>");
   $(".tipoLider").tsort({attr:'class'}); 
 }
 
@@ -193,9 +194,21 @@ $(document).ready(function(){
 	$('.scroleable').css("display","block");
 	$(".scroleable-finish").perfectScrollbar();
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
-	$("video").fadeIn(1000).get(0).play();
-	$("video").delay(14000).fadeOut(1000).get(0).play();
-        $(".screen-start").delay(15000).slideUp(1000);
+	$("video").fadeIn(1000).get(0);
+	//$("video")[0].play();
+	
+	var vid=document.getElementById('prueba');
+	vid.addEventListener("loadstart", showVideo, false);
+	vid.addEventListener("loadeddata", showVideo, false);
+	function showVideo(e) {
+	console.log("video: ",vid);
+	vid.play();
+	
+	}
+	
+	
+	$("video").delay(14000).fadeOut(1000).get(0);
+    $(".screen-start").delay(15000).slideUp(1000);
 	$("#quiz").delay(16000).animate({opacity:"1"}, 500);
 	$("#nav").delay(15000).slideDown(1000);
         timerF = setInterval(timer,1000);
