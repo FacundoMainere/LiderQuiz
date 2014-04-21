@@ -194,19 +194,7 @@ $(document).ready(function(){
 	$('.scroleable').css("display","block");
 	$(".scroleable-finish").perfectScrollbar();
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
-	$("video").fadeIn(1000).get(0);
-	//$("video")[0].play();
-	
-	var vid=document.getElementById('prueba');
-	vid.addEventListener("loadstart", showVideo, false);
-	vid.addEventListener("loadeddata", showVideo, false);
-	function showVideo(e) {
-	console.log("video: ",vid);
-	vid.play();
-	
-	}
-	
-	
+	$("video").fadeIn(1000).get(0).play();
 	$("video").delay(14000).fadeOut(1000).get(0);
     $(".screen-start").delay(15000).slideUp(1000);
 	$("#quiz").delay(16000).animate({opacity:"1"}, 500);
