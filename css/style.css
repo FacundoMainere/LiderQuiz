@@ -103,8 +103,8 @@ video {
     border-radius:20px;
     color: #4B6960;
     font-size: 1.3rem;
-    margin: 2% 5% 0;
-    padding: 20px 55px
+    margin: 1%;
+    padding: 20px 0px
 }
 .tipoLider {
     color:#4B6960;
@@ -115,9 +115,18 @@ video {
     border-radius:20px;
     margin:20px auto;	
 }
+.tipoLider span {
+    background:#E67B06;
+    border-radius: 50% 50% 50% 50%;
+    float: left;
+    font-weight: bold;
+    margin: 10px 6px;
+    padding: 8px 14px;
+    color:#fff !important;	
+}
 @media (max-height:600px) {
 	.tipoLider {
-	width:90%;
+	width:95%;
 	margin:4px auto;
 	font-size:1rem;
 	padding:10px;
@@ -173,6 +182,9 @@ video {
 	.scroleable{
 	 	margin:7% 5%;
 }
+	.scroleable-finish {
+		margin-top:2%;
+	}
 }
 @media (max-height:600px){
 	.scroleable {
@@ -225,6 +237,15 @@ ul.radioList {
     width:70%;
     position:relative;
 }
+#ans .radioList span {
+ background:#E67B06;
+    border-radius: 50% 50% 50% 50%;
+    float: left;
+    font-weight: bold;
+    margin: 3px -50px;
+    padding: 8px 14px;
+    color:#fff;
+}
 #ans .radioList li.btn-success {
 	background:#e67b0c;
 	color:white;
@@ -268,12 +289,11 @@ button#next-btn:hover {
     background:url("../imagenes/next.png") no-repeat 0px -54px;
 
 }
-.final {width:240px !important;}
+.final {width:240px !important;margin:2%;}
 #fin-btn{
     display: none;
     float: right;
     background:url("../imagenes/next.png") no-repeat 0px -54px;
-
 }
 #result{
     padding: 10px;
