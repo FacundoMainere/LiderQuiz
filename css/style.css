@@ -109,7 +109,7 @@ video {
 .tipoLider {
     color:#4B6960;
     text-align:left;
-    width:70%;
+    width:90%;
     padding:20px;
     background:rgba(255,255,255,.5);
     border-radius:20px;
@@ -120,13 +120,14 @@ video {
     border-radius: 50% 50% 50% 50%;
     float: left;
     font-weight: bold;
-    margin: 10px 6px;
+    margin: 10px -50px;
     padding: 8px 14px;
     color:#fff !important;	
+	
 }
 @media (max-height:600px) {
 	.tipoLider {
-	width:95%;
+	width:85%;
 	margin:4px auto;
 	font-size:1rem;
 	padding:10px;
@@ -245,6 +246,7 @@ ul.radioList {
     margin: 3px -50px;
     padding: 8px 14px;
     color:#fff;
+    border:1px solid;	
 }
 #ans .radioList li.btn-success {
 	background:#e67b0c;
