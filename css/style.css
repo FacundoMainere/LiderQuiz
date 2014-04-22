@@ -67,9 +67,10 @@ img.logos {
 video {
         width:70%;
         display:none;
-        top:13%;
-        left:16%;
+        top:15%;
+        left:15%;
 	position:absolute;
+	height:70%;
 }
 
 .clear {
@@ -133,7 +134,9 @@ video {
 	font-size:1rem;
 	padding:10px;
 	}
-	
+	img.logos {
+	width:60%;		
+	}	
 }
 .tipoLider h3 {
 	margin:0 2%;
@@ -197,9 +200,7 @@ video {
 		margin:2% auto;
 		}
 	#nav { height:15% !important;}
-	video {
-		top:9%;
-	}
+
 }
 * outline {
 	outline:0;
