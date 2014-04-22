@@ -195,19 +195,19 @@ $(document).ready(function(){
 	$('.scroleable').css("display","block");
 	$(".scroleable-finish").perfectScrollbar();
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
-
 var startQuiz = function() {
 	$("video").fadeOut(1000);
     $(".screen-start").slideUp(1000);
 	$("#quiz").delay(1000).animate({opacity:"1"}, 500);
 	$("#nav").slideDown(1000);
+	$('.screen-instrucciones-wrap, .screen-instrucciones').css("display","block");
+	
         timerF = setInterval(timer,1000);
         // Load question on start
         showQuiz(currQ);
         
     $('.scroleable').perfectScrollbar();
     var altura = $('.scroleable').height();
-	console.log(altura);
     $('.scroleable').delay(600).animate({scrollTop: $('.scroleable').height()}, 800);
   	$('.scroleable').animate({scrollTop: 0}, 800);
         }
