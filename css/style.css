@@ -18,7 +18,6 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-
 #main{
     font-size: 18px;
 /*    width: 800px;
@@ -252,6 +251,11 @@ ul.radioList {
     border-radius:18px;
     width:80%;
     position:relative;
+}
+
+#ans .radioList li p{
+	margin:0;
+	padding:0;
 }
 #ans .radioList span {
  background:#E67B06;
