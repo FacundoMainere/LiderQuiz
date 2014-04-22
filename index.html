@@ -17,23 +17,9 @@
 	$("button#qstart, button#next-btn, button#prev-btn").click(function(){
 		$('.scroleable').animate('slideFromRight');
 		$('.scroleable').perfectScrollbar('update');
-	
-		$('.scroleable').animate('slideFromRight', {
-		complete: function() {
-			$('.scroleable').animate(
-				{
-				scrollTop: $('.scroleable').height()
-				},
-				{
-				duration: 800,
-				complete: function() {
-					$('.scroleable').animate({scrollTop: 0}, 800);
-					}
-				}
-			);
-		}
-    });
-	
+
+		$('.scroleable').delay(600).animate({scrollTop: $('.scroleable').height()}, 800);
+  		$('.scroleable').animate({scrollTop: 0}, 800);	
 	});
 	$("button#next-btn, button#prev-btn").click(function(){
 		document.getElementById('carga-pregunta').play();	 
