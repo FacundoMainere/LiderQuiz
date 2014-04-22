@@ -200,6 +200,8 @@ video {
 	.scroleable-finish {
 		margin-top:2%;
 	}
+	.screen-instrucciones {
+	}
 }
 @media (max-height:600px){
 	.scroleable {
@@ -377,7 +379,6 @@ button#qstart, button.btn {
         top: 35%;
         left: 15%;
         width: 70%;
-        height: 30%;
         padding: 16px;
         background:rgba(255, 255, 255,.8);
         z-index:1002;
