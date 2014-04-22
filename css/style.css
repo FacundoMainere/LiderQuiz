@@ -187,7 +187,7 @@ video {
    /* border-bottom: 1px solid #bbbbc1;*/
 }
 .scroleable {
-	height:70%;
+	height:65%;
 	margin:3% 5%;
 	overflow:hidden;
 	position:absolute;
@@ -277,7 +277,7 @@ ul.radioList {
     border-top: 1px solid #ffffff;*/
     display:none;	
     position:absolute;
-    bottom:0;	
+    bottom:-1%;	
     width:90%;
     margin:auto;
     height:15%;
