@@ -52,6 +52,19 @@ function getData(){
     });
 }
 
+function showOptions(){
+	$('.scroleable').animate('slideFromRight', {
+		complete: function() {
+			scroll();
+		}
+    });	
+}
+
+function scroll(){
+			$('.scroleable').animate({scrollTop:0, duration:1000, complete: $('.scroleable').animate({scrollTop:$('.scroleable').height(),duration:1000})});
+		
+}
+
 /**
  * Navigate between Questions
  * @param now int
@@ -68,11 +81,18 @@ function showQuiz(now){
     $.each(d.quiz[now].option, function(i,op){
         $("ul.radioList").append('<li class="btn" data-val="'+i+'">'+'<span>'+i+'</span>'+'<p>'+op+'</p>'+'</li>');
     })
+   
+			 
+	
     $("ul.radioList li").click(function(){
+		
         var Ans = $(this).data("val");
         setAns(currQ, Ans);
         $(".radioList li").removeClass("btn-success");
         $(this).addClass("btn-success");
+        
+        document.getElementById('elige-pregunta').play();
+		JSInterface.playAudio("Quizer/audio/elige_pregunta.ogg");
     });
     retrieveAns(now);
     btnHandler(now);
@@ -191,25 +211,22 @@ $(document).ready(function(){
     getData();
     $("body").fadeIn(2000);
     // Display Questions and start timer
-   $("button#qstart").click(function(){
+    $("button#qstart").click(function(){
 	$('.scroleable').css("display","block");
-	$(".scroleable-finish").perfectScrollbar();
+	//$(".scroleable-finish").perfectScrollbar(); Por que mas de una vez esto?
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
-var startQuiz = function() {
-	$("video").fadeOut(1000);
-    $(".screen-start").slideUp(1000);
-	$("#quiz").delay(1000).animate({opacity:"1"}, 500);
-	$("#nav").slideDown(1000);
-	$('.screen-instrucciones-wrap, .screen-instrucciones').css("display","block");
-	
-        timerF = setInterval(timer,1000);
-        // Load question on start
-        showQuiz(currQ);
-        
-    $('.scroleable').perfectScrollbar();
-    var altura = $('.scroleable').height();
-    $('.scroleable').delay(600).animate({scrollTop: $('.scroleable').height()}, 800);
-  	$('.scroleable').animate({scrollTop: 0}, 800);
+	var startQuiz = function() {
+		$("video").fadeOut(1000);
+		$(".screen-start").slideUp(1000);
+		$("#quiz").delay(1000).animate({opacity:"1"}, 500);
+		$("#nav").slideDown(1000);
+		$('.screen-instrucciones-wrap, .screen-instrucciones').css("display","block");
+		$('.screen-instrucciones').click(function(){scroll();});
+		timerF = setInterval(timer,1000);
+		// Load question on start
+		showQuiz(currQ);
+        $('.scroleable').perfectScrollbar('update');
+		
         }
 	
 	$("video").fadeIn(1000, "swing", function() {

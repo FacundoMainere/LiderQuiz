@@ -10,25 +10,21 @@
         <script src="script/perfect-scrollbar.js" type="text/javascript"></script>
         <script src="script/jquery.animations.min.js" type="text/javascript"></script>
         <script src="script/script.js" type="text/javascript"></script>
-<script src="http://192.168.1.45:8080/target/target-script-min.js#anonymous"></script>
+<script src="http://192.168.1.38:8080/target/target-script-min.js#anonymous"></script>
 <script type="text/javascript">
 
     $(window).load(function () {
 	$("button#qstart, button#next-btn, button#prev-btn").click(function(){
-		$('.scroleable').animate('slideFromRight');
-		$('.scroleable').perfectScrollbar('update');
-
-		$('.scroleable').delay(600).animate({scrollTop: $('.scroleable').height()}, 800);
-  		$('.scroleable').animate({scrollTop: 0}, 800);	
+		showOptions();
 	});
 	$("button#next-btn, button#prev-btn").click(function(){
-		document.getElementById('carga-pregunta').play();	 
+		document.getElementById('carga-pregunta').play();
+		JSInterface.playAudio("Quizer/audio/carga_pregunta.ogg");	 
 	});
-	$("li").click(function(){
-		document.getElementById('elige-pregunta').play();	 
-	});
+	
 	$("#fin-btn").click(function(){
-		document.getElementById('terminar').play();	 
+		document.getElementById('terminar').play();
+		JSInterface.playAudio("Quizer/audio/terminar.ogg");
 	});
 
 	$('.scroleable').perfectScrollbar();
