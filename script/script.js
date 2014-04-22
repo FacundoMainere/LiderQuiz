@@ -196,8 +196,9 @@ $(document).ready(function(){
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
 	$("video").fadeIn(1000).get(0).play();
 	$("video").delay(14000).fadeOut(1000).get(0);
-    $(".screen-start").delay(15000).slideUp(1000);
+        $(".screen-start").delay(15000).slideUp(1000);
 	$("#quiz").delay(16000).animate({opacity:"1"}, 500);
+	$('.screen-instrucciones-wrap, .screen-instrucciones').delay(18000).css("display","block");
 	$("#nav").delay(15000).slideDown(1000);
         timerF = setInterval(timer,1000);
         // Load question on start

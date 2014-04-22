@@ -42,6 +42,9 @@
 	}else {
 		$('.scroleable .ps-scrollbar-y-rail').css("opacity","1");
 	}
+	$('.screen-instrucciones-wrap').click(function() {$('.screen-instrucciones-wrap').css("display", "none")});
+
+	
 });
 </script>
 
@@ -53,6 +56,7 @@
         </div>
         </noscript>
         <div id="main">
+
             <div class="screen-start">
 		<div id="inicio">
 		<img class="logo1" src="imagenes/logo1.png" />
@@ -85,6 +89,13 @@
 		<button class="btn btn-warning final" onclick="window.location.reload()">Volver a Comenzar</button>
             </div>
             <div id="quiz">
+			    <div class="screen-instrucciones-wrap">
+		<div class="screen-instrucciones">
+		<h2>Instrucciones</h2>
+		<p>Seleccione una y sólo una de las opciones presentadas a cada situación planteada. No busque la solución ideal sino aquello que Ud. haya o hubiera hecho en un pasado reciente. Realícelo de manera espontánea en un tiempo no mayor a 15 minutos.</p>
+		 </div>		
+	    </div>
+
 		<img class="logo2" src="imagenes/logo1.png" />
                 <div id="info">
                     <span id="qnum">2/10</span>

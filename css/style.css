@@ -357,3 +357,30 @@ button#qstart, button.btn {
 	font-size:1.3rem;
 	width:150px;
 }
+.screen-instrucciones-wrap{
+	display:none;
+	position:absolute;
+	top: 0%;
+	left: 0%;
+        width: 100%;
+        height: 100%;
+        background:rgba(0,0,0,.8);
+        z-index:1001;
+}
+.screen-instrucciones {
+	display: inherit;
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        width: 70%;
+        height: 30%;
+        padding: 16px;
+        background:rgba(255, 255, 255,.8);
+        z-index:1002;
+        overflow: auto;
+	border-radius:25px;
+}
+.screen-instrucciones h2 {
+	margin:0;
+	color:#E67B06;
+}
