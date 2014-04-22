@@ -66,7 +66,7 @@ function showQuiz(now){
 	var optionsLetter=["a","b","c","d"];
     // Display Options
     $.each(d.quiz[now].option, function(i,op){
-        $("ul.radioList").append('<li class="btn" data-val="'+i+'">'+'<span>'+i+'</span>'+op+'</li>');
+        $("ul.radioList").append('<li class="btn" data-val="'+i+'">'+'<span>'+i+'</span>'+'<p>'+op+'</p>'+'</li>');
     })
     $("ul.radioList li").click(function(){
         var Ans = $(this).data("val");
@@ -184,6 +184,7 @@ function showAns(){
     $("#result>ol").html(prep);
 }
 
+
 $(document).ready(function(){
 	
 	
@@ -194,14 +195,28 @@ $(document).ready(function(){
 	$('.scroleable').css("display","block");
 	$(".scroleable-finish").perfectScrollbar();
         $(".mujer, .hombre, .logo1, h1, #qstart").animate({opacity:0},1000);
-	$("video").fadeIn(1000).get(0).play();
-	$("video").delay(14000).fadeOut(1000).get(0);
-    $(".screen-start").delay(15000).slideUp(1000);
-	$("#quiz").delay(16000).animate({opacity:"1"}, 500);
-	$("#nav").delay(15000).slideDown(1000);
+
+var startQuiz = function() {
+	$("video").fadeOut(1000);
+    $(".screen-start").slideUp(1000);
+	$("#quiz").delay(1000).animate({opacity:"1"}, 500);
+	$("#nav").slideDown(1000);
         timerF = setInterval(timer,1000);
         // Load question on start
         showQuiz(currQ);
+        
+    $('.scroleable').perfectScrollbar();
+    var altura = $('.scroleable').height();
+	console.log(altura);
+    $('.scroleable').delay(600).animate({scrollTop: $('.scroleable').height()}, 800);
+  	$('.scroleable').animate({scrollTop: 0}, 800);
+        }
+	
+	$("video").fadeIn(1000, "swing", function() {
+		$("video").bind("ended", startQuiz);
+		this.play();
+		});
+	
    });
     // Clear selected answer
     $("button#ans-clear").click(function(){

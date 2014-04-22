@@ -16,14 +16,24 @@
     $(window).load(function () {
 	$("button#qstart, button#next-btn, button#prev-btn").click(function(){
 		$('.scroleable').animate('slideFromRight');
-	//	$('li:nth-child(1)').animate('flipX',{delay:1000});
-	//	$('li:nth-child(2)').animate('flipX', {delay: 1500});
-	//	$('li:nth-child(3)').animate('flipX', {delay: 2000});
-	//	$('li:nth-child(4)').animate('flipX', {delay: 2500});
 		$('.scroleable').perfectScrollbar('update');
 	
-		$('.scroleable').delay(600).animate({scrollTop: $('.scroleable').height()}, 800);
-  		$('.scroleable').animate({scrollTop: 0}, 800);	
+		$('.scroleable').animate('slideFromRight', {
+		complete: function() {
+			$('.scroleable').animate(
+				{
+				scrollTop: $('.scroleable').height()
+				},
+				{
+				duration: 800,
+				complete: function() {
+					$('.scroleable').animate({scrollTop: 0}, 800);
+					}
+				}
+			);
+		}
+    });
+	
 	});
 	$("button#next-btn, button#prev-btn").click(function(){
 		document.getElementById('carga-pregunta').play();	 
@@ -37,7 +47,7 @@
 
 	$('.scroleable').perfectScrollbar();
 	var altura = $('.scroleable').height();
-	if (altura > 597) {
+	if (altura > 580) {
 		$('.scroleable .ps-scrollbar-y-rail').css("opacity","0");
 	}else {
 		$('.scroleable .ps-scrollbar-y-rail').css("opacity","1");
@@ -61,7 +71,7 @@
                   <img src="imagenes/mujer2.png" class="mujer" />
 	          <img src="imagenes/hombre.png" class="hombre" />
 
-        	  <video id="prueba" autobuffer>
+        	  <video id="prueba"  autobuffer>
         	  	<source src="android.resource://ar.crear.liderquiz/raw/manpower">
         	  	<source src="video.m4v" type="video/mp4">
         	  </video>

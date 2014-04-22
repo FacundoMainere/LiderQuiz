@@ -240,6 +240,11 @@ ul.radioList {
     width:80%;
     position:relative;
 }
+
+#ans .radioList li p{
+	margin:0;
+	padding:0;
+}
 #ans .radioList span {
  background:#E67B06;
     border-radius: 50% 50% 50% 50%;
