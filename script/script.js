@@ -226,12 +226,13 @@ $(document).ready(function(){
 		// Load question on start
 		showQuiz(currQ);
         $('.scroleable').perfectScrollbar('update');
-		
         }
 	
 	$("video").fadeIn(1000, "swing", function() {
 		$("video").bind("ended", startQuiz);
 		this.play();
+  };
+		setTimeout(togglePlay,1);
 		});
 	
    });

@@ -79,7 +79,7 @@ img.logos {
         left:15%;
 	position:absolute;
 	height:70%;
-	z-index:-1;
+	z-index:0;
 }
 video {
         display:none;
@@ -370,6 +370,8 @@ button#qstart, button.btn {
 	cursor:pointer;
 	font-size:1.3rem;
 	width:150px;
+	z-index:1;
+	position:relative;
 }
 .screen-instrucciones-wrap{
 	display:none;
