@@ -207,9 +207,12 @@ video {
 	}
 	.screen-instrucciones {
 	}
+}
+@media (min-height:859px){
 	.screen-finish h2 {
 		padding:20px 10px;
 	}
+
 }
 @media (max-height:600px){
 	.scroleable {
