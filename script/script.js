@@ -231,8 +231,6 @@ $(document).ready(function(){
 	$("video").fadeIn(1000, "swing", function() {
 		$("video").bind("ended", startQuiz);
 		this.play();
-  };
-		setTimeout(togglePlay,1);
 		});
 	
    });
