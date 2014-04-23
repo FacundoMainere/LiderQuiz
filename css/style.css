@@ -73,13 +73,18 @@ img.barrita {
 img.logos {
 	width:50%;
 }
-video {
-        width:70%;
-        display:none;
+.video-wrap {
+	width:70%;
         top:15%;
         left:15%;
 	position:absolute;
+	height:70%;
+	z-index:-1;
+}
+video {
+        display:none;
 	height:auto;
+	width:100%;
 }
 
 .clear {
