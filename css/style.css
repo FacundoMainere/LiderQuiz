@@ -79,7 +79,7 @@ video {
         top:15%;
         left:15%;
 	position:absolute;
-	height:70%;
+	height:auto;
 }
 
 .clear {
