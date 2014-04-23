@@ -208,7 +208,7 @@ video {
 	.screen-instrucciones {
 	}
 }
-@media (min-height:859px){
+@media (min-height:799px){
 	.screen-finish h2 {
 		padding:20px 10px;
 	}
