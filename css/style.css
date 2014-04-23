@@ -79,7 +79,7 @@ video {
         top:15%;
         left:15%;
 	position:absolute;
-	height:70%;
+	height:auto;
 }
 
 .clear {
@@ -201,6 +201,9 @@ video {
 		margin-top:2%;
 	}
 	.screen-instrucciones {
+	}
+	.screen-finish h2 {
+		padding:20px 10px;
 	}
 }
 @media (max-height:600px){
