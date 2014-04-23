@@ -15,7 +15,10 @@
 
     $(window).load(function () {
 	$("button#qstart, button#next-btn, button#prev-btn").click(function(){
+		
 		showOptions();
+		$('.scroleable').perfectScrollbar();
+		$('.scroleable').perfectScrollbar('update');
 	});
 	$("button#next-btn, button#prev-btn").click(function(){
 		document.getElementById('carga-pregunta').play();
